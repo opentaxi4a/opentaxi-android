@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">او تی</string>
+    <string name="TxtLogin">ورود</string>
+    <string name="TxtHintInputMobile">شماره تلفن خود را وارد کنید</string>
+    <string name="TxtInputMobileMessage">برای شروع شماره تلفن خود را وارد کنید.</string>
+    <string name="TxtMobileNotValid">شماره تلفن نامعتبر است</string>
+    <string name="btnSendCode">ارسال کد  احراز هویت</string>
+    <string name="TextTermsAccept">استفاده از سرویس او تی به معنای پذیرش قوانین استفاده از سرویس است.</string>
+    <string name="success_operation">پردازش موفق</string>
+    <string name="fail_operation">پردازش ناموفق</string>
+    <string name="network_error">نمی‌توان به سرویس دهنده متصل شد. از اتصال اینترنت خود مطمئن شوید</string>
+    <string name="save_code">احراز هویت</string>
+    <string name="input_active_code">کد احراز هویت را وارد کنید</string>
+    <string name="please_enter_activation_code_recived_by_sms">لطفا کد احراز هویت را که از طریق پیامک دریافت کرده‌اید را وارد کنید</string>
+    <string name="activation_account">فعال سازی حساب کاربری</string>
+    <string name="your_phone_number">شماره تلفن شما:  %1$s</string>
+    <string name="too_many_request">به تازگی یک درخواست داشته اید لطفا  ۲ دقیقه دیگر مجددا تلاش کنید.</string>
+    <string name="code_wrong">کد وارد شده نامعتبر است . لطفا مججدا تلاش کنید.</string>
+    <string name="not_connected_to_internet">اتصال به اینترنت برقرار نیست</string>
+    <string name="in_progress">در حال پردازش ...</string>
+    <string name="set_source">انتخاب مبدا</string>
+    <string name="set_destenation">انتخاب مقصد</string>
+    <string name="list_trips">سفرها</string>
+    <string name="my_location">موقعیت من</string>
+    <string name="submit_request">درخواست تاکسی</string>
+    <string name="from">مبدا:</string>
+    <string name="to">مقصد:</string>
+    <string name="searching">در جست و جوی نزدیکترین تاکسی برای شما ...</string>
+    <string name="cancel">لغو درخواست</string>
+    <string name="trip_cancelled">درخواست سفر لغو شد.</string>
+</resources>

@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Open Taxi Passenger</string>
+    <string name="TxtLogin">Login</string>
+    <string name="TxtHintInputMobile">Input mobile number</string>
+    <string name="TxtInputMobileMessage">For use OpenTaxi Services input your phone number.</string>
+    <string name="TxtMobileNotValid">Mobile number is invalid!</string>
+    <string name="btnSendCode">Send Activation Code</string>
+    <string name="TextTermsAccept">With login to Open Taxi Service you accepted Terms and Privacy of OpenTaxi.</string>
+    <string name="success_operation">Success operation</string>
+    <string name="fail_operation">fail operation</string>
+    <string name="network_error">Can not connect to server!</string>
+    <string name="save_code">save code</string>
+    <string name="input_active_code">input active code</string>
+    <string name="please_enter_activation_code_recived_by_sms">Please enter activation code recived by SMS</string>
+    <string name="activation_account">Activation Account</string>
+    <string name="your_phone_number">Your phone number:%1$s</string>
+    <string name="too_many_request">To many request please try again in 2 minutes</string>
+    <string name="code_wrong">Your entered code was wrong.please try again.</string>
+    <string name="not_connected_to_internet">Not Connected to internet</string>
+    <string name="in_progress">In progress …</string>
+    <string name="set_source">Set Source</string>
+    <string name="set_destenation">Set Destenation</string>
+    <string name="list_trips">Trips</string>
+    <string name="my_location">my location</string>
+    <string name="submit_request">Submit taxi request</string>
+    <string name="from">Source:</string>
+    <string name="to">Destination:</string>
+    <string name="cancel">Cancel request</string>
+    <string name="searching">Searching for nearest Taxi around you…</string>
+    <string name="trip_cancelled">Trip cancelled successfully</string>
+    <string name="channel_name" translatable="false">Open Taxic</string>
+    <string name="channel_description" translatable="false">OpenTaxi Discripter</string>
+
+
+</resources>
