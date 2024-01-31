@@ -176,7 +176,7 @@ public class MainActivity extends AppCompatActivity {
         mLocationOverlay.enableMyLocation();
         map.getOverlays().add(this.mLocationOverlay);
 
-        //map scale
+        //map scale bar
         final DisplayMetrics dm = getContext().getResources().getDisplayMetrics();
         mScaleBarOverlay = new ScaleBarOverlay(map);
         mScaleBarOverlay.setCentred(true);
@@ -220,7 +220,6 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onResume() {
-        app.successToast("resuming ....");
         if(secondPoint != null){
             //window came back from previous activity
             removeSecondMarker();
@@ -318,12 +317,6 @@ public class MainActivity extends AppCompatActivity {
     public void btnSetLocation(View view){
         final MyLocationOverlayWithClick overlay = new MyLocationOverlayWithClick(map);
         IMapController mapController = map.getController();
-//        overlay.enableFollowLocation();
-//        overlay.enableMyLocation();
-//        GeoPoint myLocation = overlay.getMyLocation();
-//        GeoPoint startPoint = new GeoPoint(34.112095, 46.592645);
-//        mapController.setCenter(myLocation);
-
         locationTrack = new LocationTrack(MainActivity.this);
 
 
@@ -407,6 +400,13 @@ public class MainActivity extends AppCompatActivity {
                                             else{
                                                 app.failToast("android version is too low... we can not service");
                                             }
+                                            //save sharedata
+                                            shareData.getShareData().edit().putString(String.valueOf(shareData.P1LAT), String.valueOf(firstPoint.getLatitude())).apply();
+                                            shareData.getShareData().edit().putString(String.valueOf(shareData.P2LAT), String.valueOf(secondPoint.getLatitude())).apply();
+                                            //shareData.getShareData().edit().putString(String.valueOf(shareData.P3LAT), String.valueOf(thirdPoint.getLatitude())).apply();
+                                            shareData.getShareData().edit().putString(String.valueOf(shareData.P1LONG), String.valueOf(firstPoint.getLongitude())).apply();
+                                            shareData.getShareData().edit().putString(String.valueOf(shareData.P2LONG), String.valueOf(secondPoint.getLongitude())).apply();
+                                            //shareData.getShareData().edit().putString(String.valueOf(shareData.P3LONG), String.valueOf(thirdPoint.getLongitude())).apply();
                                             //open accept code form
                                             Intent intent = new Intent(MainActivity.this, FrmShowPrice.class);
                                             startActivity(intent);

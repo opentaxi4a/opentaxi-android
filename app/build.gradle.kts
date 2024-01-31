@@ -46,5 +46,4 @@ dependencies {
     implementation("com.github.bumptech.glide:glide:4.13.2")
     implementation("io.github.chaosleung:pinview:1.4.4")
     implementation("org.osmdroid:osmdroid-android:6.1.18")
-    implementation("pl.droidsonroids.gif:android-gif-drawable:1.2.17")
 }

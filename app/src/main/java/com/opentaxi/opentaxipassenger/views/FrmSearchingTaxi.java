@@ -108,7 +108,6 @@ public class FrmSearchingTaxi extends AppCompatActivity {
                                         myTimer.cancel();
                                         Intent intent = new Intent(FrmSearchingTaxi.this,FrmTrip.class);
                                         startActivity(intent);
-
                                         finish();
                                     }
                                 }

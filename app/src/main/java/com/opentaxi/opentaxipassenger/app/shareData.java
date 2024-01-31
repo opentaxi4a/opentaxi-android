@@ -25,4 +25,11 @@ public class shareData {
     public static final String LANGUAGE = "fa";
     public static final String USERNAME = "USERNAME";
 
+    public static final String P1LAT = "P1LAT";
+    public static final String P2LAT = "P2LAT";
+    public static final String P3LAT = "P3LAT";
+    public static final String P1LONG = "P1LONG";
+    public static final String P2LONG = "P2LONG";
+    public static final String P3LONG = "P3LONG";
+
 }

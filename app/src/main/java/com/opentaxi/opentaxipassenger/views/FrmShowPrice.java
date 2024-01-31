@@ -40,7 +40,45 @@ public class FrmShowPrice extends AppCompatActivity {
 
         //set volley request object
         requestQueue = Volley.newRequestQueue(this);
-
+        //show address
+        new Thread(() -> {
+            @SuppressLint("DefaultLocale") StringRequest stringRequest = new StringRequest(
+                    Request.Method.POST,
+                    app.BASE_API_URL + "client/location/get-address",
+                    response -> {
+                        try {
+                            JSONObject jsonObject = new JSONObject(response);
+                            String errorCode = jsonObject.getString("error");
+                            if (errorCode.equals("0")) {
+                                //save number in sharedata
+                                String price = jsonObject.getJSONObject("data").getString("price");
+                                TextView textview = findViewById(R.id.priceButton);
+                                textview.setText(price);
+                            }
+                        } catch (JSONException e) {
+                            throw new RuntimeException(e);
+                        }
+                    },
+                    error -> app.failToast(getString(R.string.network_error))
+            ) {
+                @NonNull
+                @Override
+                protected Map<String, String> getParams() throws AuthFailureError {
+                    Map<String, String> params = new HashMap<>();
+                    params.put("lat", shareData.getShareData().getString(shareData.P1LAT,"0"));
+                    params.put("long", shareData.getShareData().getString(shareData.P1LONG,"0"));
+                    return params;
+                }
+                @Override
+                public Map<String, String> getHeaders() throws AuthFailureError {
+                    Map<String, String>  params = new HashMap<String, String>();
+                    params.put("X-AUTH-TOKEN", shareData.getShareData().getString(shareData.AUTHKEY,""));
+                    return params;
+                }
+            };
+            requestQueue.add(stringRequest);
+        }).start();
+        //calculate price
         new Thread(() -> {
             @SuppressLint("DefaultLocale") StringRequest stringRequest = new StringRequest(
                     Request.Method.POST,
